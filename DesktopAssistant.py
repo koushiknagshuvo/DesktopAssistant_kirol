@@ -1,14 +1,12 @@
-import pyttsx3 #pip install pyttsx3
-import speech_recognition as sr #pip install SpeechRecognizer
 import datetime
-import wikipedia #pip install wikipedia
+import smtplib  # for email send
 import webbrowser
-import smtplib # for email send
 from email.message import EmailMessage
-import pywhatkit #pip install pywhatkit
 
-
-
+import pyttsx3  # pip install pyttsx3
+import pywhatkit  # pip install pywhatkit
+import speech_recognition as sr  # pip install SpeechRecognizer
+import wikipedia  # pip install wikipedia
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
@@ -75,7 +73,7 @@ def send_email(receiver, subject, message):
     # Make sure to give app access in your Google account
     #For that go to gogle account then click on security option at the left 
     # then click on less secure app access at the bottom and turn on it.
-    server.login('koushik15-12971@diu.edu.bd', '191-15-12971')
+    server.login('koushik15-12971@diu.edu.bd', 'Your_Email_password')
     email = EmailMessage()
     email['From'] = 'koushik15-12971@diu.edu.bd'
     email['To'] = receiver
